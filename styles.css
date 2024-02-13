@@ -2,6 +2,21 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-size: 1rem;
+}
+
+/* Adjust font size for smaller screens */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* 90% of the default font size */
+    }
+}
+
+/* Adjust font size for even smaller screens */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 0.8rem; /* 80% of the default font size */
+    }
 }
 
 .container {
@@ -19,4 +34,41 @@ body, html {
     border: 1px solid #ccc;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
+
+.sub-heading-1{
+    font-family: Montserrat;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 80%;
+    margin: 0;
+    margin-bottom: 0.75em;
+}
+.textbox-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 30%;
+    padding: 20px;
+}
+
+p {
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    word-wrap: break-word;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+
+
+
