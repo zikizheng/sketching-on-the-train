@@ -1,24 +1,22 @@
 /* styles.css */
+
 body, html {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
 }
 
-/* Adjust font size for smaller screens */
-@media only screen and (max-width: 768px) {
-    body {
-        font-size: 0.9rem; /* 90% of the default font size */
-    }
-}
-
-/* Adjust font size for even smaller screens */
-@media only screen and (max-width: 480px) {
-    body {
-        font-size: 0.8rem; /* 80% of the default font size */
-    }
-}
-
+/* not working yet idk*/
+.rotate-landscape {
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }  
+  
 .container {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping */
@@ -31,10 +29,48 @@ body, html {
     width: 100vw; /* Full viewport width for each section */
     min-height: 100vh; /* Full viewport height for each section */
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
+    padding: 5em;
     box-sizing: border-box;
     position: relative;
+}
+
+.pg-1{
+    flex: 1;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#block-1{
+    flex: 1;
+    max-width: 20%;
+}
+
+#train-head-wrapper{
+    display: flex;
+    align-self: flex-end;
+    flex: 1;
+    left: 0;
+    height: 80vh;
+}
+
+#train-head{
+    flex: 1;
+    height: 80%
+}
+
+.textbox-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    left: 5%;
+    width: 20%;
+    padding: 20px;
+    padding-left: 2em;
+    align-self: center;
 }
 
 .sub-heading-1{
@@ -46,16 +82,6 @@ body, html {
     width: 80%;
     margin: 0;
     margin-bottom: 0.75em;
-}
-.textbox-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    width: 30%;
-    padding: 20px;
 }
 
 p {
@@ -69,6 +95,32 @@ p {
     margin-bottom: 1em;
 }
 
+.pg-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#pg-2-upper{
+    flex: 1;
+    max-height: 40%;
+}
+#pg-2-lower{
+    flex: 1;
+}
+#door-1-wrapper{
+    flex: 1;
+    display: flex;
+    width: 22.5%;
+    margin: 0;
+    padding: 0;
+}
 
 
 
