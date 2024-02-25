@@ -4,8 +4,6 @@ body, html {
     margin: 0;
     padding: 0;
 }
-
-/* not working yet idk*/
 .rotate-landscape {
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: left top;
@@ -19,19 +17,24 @@ body, html {
   
 .container {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .section {
     flex: 0 0 auto;
     width: 100vw; /* Full viewport width for each section */
     min-height: 100vh; /* Full viewport height for each section */
-    background-color: #f0f0f0;
+    background-color: #fff;
     padding: 5em;
     box-sizing: border-box;
     position: relative;
+}
+
+.header{
+    position: absolute;
+    margin-top: 3em;
 }
 
 .pg-1{
@@ -42,24 +45,45 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-#block-1{
+.block-1{
     flex: 1;
     max-width: 20%;
 }
 
-#train-head-wrapper{
+.train-head-wrapper{
     display: flex;
     align-self: flex-end;
+    flex-direction: column;
     flex: 1;
     left: 0;
-    height: 80vh;
+    height: 100%;
 }
 
-#train-head{
+.train-head-wrapper-end{
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
     flex: 1;
-    height: 80%
+    left: 0;
+    height: 100%;
+}
+
+.train-head{
+    flex: 1;
+    height: 80%;
+    flex-grow: 4;
+}
+.train-head-reverse{
+    flex: 1;
+    height: 80%;
+    width: 40%;
+    flex-grow: 4;
+    transform: scaleX(-1);
 }
 
 .textbox-1 {
@@ -84,6 +108,90 @@ body, html {
     margin-bottom: 0.75em;
 }
 
+.top{
+    flex: 1;
+    height: 20%;
+}
+.mid{
+    flex: 1;
+    height: 60%;
+    width: 100%;
+}
+.bot{
+    flex: 1;
+    height: 20%;
+}
+
+.car-wrapper-1{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.seat-wrapper{
+    display: flex;
+    flex: 1;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.seat-top{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex: 1;
+}
+.window-1{
+    display: flex;
+}
+.window-2{
+    display: flex;
+    width: auto;
+}
+.window-spacer{
+    display: flex;
+    width: 100%;
+}
+.seat-bot{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex: 1;
+}
+
+.seat-1{
+    height: 100%;
+    width: auto;
+}
+
+.door-wrapper{
+    flex: 1;
+    display: flex;
+    height: 100%;
+}
+.half-door{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.door-1{
+    max-width: auto;
+    height: 90%;
+}
+
+.head-back{
+    height: 60%;
+    width: auto;
+    transform: scaleX(-1);
+}
+
 p {
     font-family: Montserrat;
     font-weight: 400;
@@ -95,7 +203,7 @@ p {
     margin-bottom: 1em;
 }
 
-.pg-2{
+.pgs{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -106,21 +214,4 @@ p {
     padding: 0;
     height: 100%;
 }
-
-#pg-2-upper{
-    flex: 1;
-    max-height: 40%;
-}
-#pg-2-lower{
-    flex: 1;
-}
-#door-1-wrapper{
-    flex: 1;
-    display: flex;
-    width: 22.5%;
-    margin: 0;
-    padding: 0;
-}
-
-
 
