@@ -59,6 +59,20 @@ document.getElementById('window-1').addEventListener('click', function() {
 document.getElementById('window-1').addEventListener('mouseout', function() {
     changeTextColor('', 'window-1-text');
 });
+document.getElementById('window-2').addEventListener('click', function() {
+    changeTextColor('black', 'window-2-text');
+});
+
+document.getElementById('window-2').addEventListener('mouseout', function() {
+    changeTextColor('', 'window-2-text');
+});
+document.getElementById('window-3').addEventListener('click', function() {
+    changeTextColor('black', 'window-3-text');
+});
+
+document.getElementById('window-3').addEventListener('mouseout', function() {
+    changeTextColor('', 'window-3-text');
+});
 
 document.getElementById('auntie').addEventListener('click', function() {
     changeTextColor('black', 'auntie-h2');

@@ -184,14 +184,44 @@ body, html {
 }
 .window-2{
     display: flex;
-    height: 100%;
+    position: absolute;
+    height: 30%;
     width: auto;
-    transform: translateX(20%);
+    left: 65%;
+    transition: transform 0.3s ease-in-out;
+}
+.window-2:hover {
+    transform: scale(1.2);
+}
+
+.window-2-text{
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    color:#ffffff;
+    width: 30%;
+    left: 65%;
+    top: 7%;
 }
 .window-3{
     display: flex;
+    position: absolute;
+    height: 30%;
     width: auto;
-    transform: translateX(70%);
+    left: 30%;
+    transition: transform 0.3s ease-in-out;
+
+}
+.window-3:hover {
+    transform: scale(1.2);
+}
+
+.window-3-text{
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    color:#ffffff;
+    width: 30%;
+    left: 30%;
+    top: 7%;
 }
 
 .window-spacer{
