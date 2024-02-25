@@ -145,38 +145,24 @@ const poleGuyImg1 = document.getElementById('pole-guy-1');
 const poleGuyImg2 = document.getElementById('pole-guy-2');
 let isDefault = true;
 
-function handleClick() {
+poleGuyImg2.addEventListener('click', function(){
     changeTextColor('black', 'pole-guy-h2');
     changeTextColor('black', 'pole-guy-text');
-    if (isDefault) {
-        poleGuyImg1.style.opacity = 0;
-        poleGuyImg2.style.opacity = 1;
-        isDefault = false;
-    } else {
-        poleGuyImg1.style.opacity = 1;
-        poleGuyImg2.style.opacity = 0;
-        isDefault = true;
-    }
-}
-
-function handleMouseOut() {
+    poleGuyImg1.style.opacity = '0';
+    poleGuyImg2.style.opacity = '1';
+});
+poleGuyImg2.addEventListener('mouseout', function(){
     changeTextColor('', 'pole-guy-h2');
     changeTextColor('', 'pole-guy-text');
-    poleGuyImg1.style.transform = 'scale(1)';
-    if (!isDefault) {
-        poleGuyImg1.style.opacity = 1;
-        poleGuyImg2.style.opacity = 0;
-        isDefault = true;
-    } else {
-        poleGuyImg1.style.opacity = 0;
-        poleGuyImg2.style.opacity = 1;
-        isDefault = false;
-    }
-}
-
-poleGuyImg2.addEventListener('click', handleClick);
-poleGuyImg2.addEventListener('mouseout', handleMouseOut);
+    poleGuyImg2.style.opacity = '';
+    setTimeout(function() {
+        poleGuyImg1.style.opacity = '';
+        poleGuyImg1.style.transform = 'scale(1)';
+    }, 150);
+    
+});
 poleGuyImg2.addEventListener('mouseover', function(){
+    poleGuyImg1.style.transition = 'transform 0.3s ease-in-out';
     poleGuyImg1.style.transform = 'scale(1.2)';
 })
 
@@ -192,3 +178,37 @@ document.getElementById('bag-wiggle').addEventListener('click', function() {
         this.style.animation = '';
     });
   });
+
+  const kid1 = document.getElementById('kid-1');
+  const kid2 = document.getElementById('kid-2');
+  
+  kid1.addEventListener('click', function() {
+    this.style.opacity = '0';
+    kid2.style.opacity = '1';
+  });
+  
+  kid1.addEventListener('mouseout', function() {
+    this.style.opacity = '';
+    kid2.style.opacity = '';
+  });
+
+const book1 = document.getElementById('book-1');
+const book2 = document.getElementById('book-2');
+
+book1.addEventListener('click', function() {
+  this.style.transition = 'transform 0.3s ease-in-out';
+  this.style.opacity = '0';
+  book2.style.opacity = '1';
+});
+
+book1.addEventListener('mouseout', function() {
+  this.style.transform = 'scale(1)';
+  this.style.transition = 'transform 0.3s ease-in-out';
+  this.style.opacity = '';
+  book2.style.opacity = '';
+});
+
+book1.addEventListener('mouseover', function(){
+    book1.style.transition = 'transform 0.3s ease-in-out';
+    book1.style.transform = 'scale(1.2)';
+});
