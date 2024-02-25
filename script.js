@@ -100,7 +100,6 @@ document.getElementById('doll-kids').addEventListener('mouseout', function() {
     changeTextColor('', 'doll-kids-text');
 });
 
-
 document.getElementById('bag-1').addEventListener('click', function() {
     this.classList.remove('clicked');
     // Add the 'clicked' class to trigger the spin animation
@@ -138,5 +137,58 @@ function changeImage() {
     dollKidsImg.src = imageList[index];
     index = (index + 1) % imageList.length;
 }
-
 setInterval(changeImage, 1000);
+
+
+
+const poleGuyImg1 = document.getElementById('pole-guy-1');
+const poleGuyImg2 = document.getElementById('pole-guy-2');
+let isDefault = true;
+
+function handleClick() {
+    changeTextColor('black', 'pole-guy-h2');
+    changeTextColor('black', 'pole-guy-text');
+    if (isDefault) {
+        poleGuyImg1.style.opacity = 0;
+        poleGuyImg2.style.opacity = 1;
+        isDefault = false;
+    } else {
+        poleGuyImg1.style.opacity = 1;
+        poleGuyImg2.style.opacity = 0;
+        isDefault = true;
+    }
+}
+
+function handleMouseOut() {
+    changeTextColor('', 'pole-guy-h2');
+    changeTextColor('', 'pole-guy-text');
+    poleGuyImg1.style.transform = 'scale(1)';
+    if (!isDefault) {
+        poleGuyImg1.style.opacity = 1;
+        poleGuyImg2.style.opacity = 0;
+        isDefault = true;
+    } else {
+        poleGuyImg1.style.opacity = 0;
+        poleGuyImg2.style.opacity = 1;
+        isDefault = false;
+    }
+}
+
+poleGuyImg2.addEventListener('click', handleClick);
+poleGuyImg2.addEventListener('mouseout', handleMouseOut);
+poleGuyImg2.addEventListener('mouseover', function(){
+    poleGuyImg1.style.transform = 'scale(1.2)';
+})
+
+document.getElementById('bag-wiggle').addEventListener('click', function() {
+    this.style.animation = 'wiggle 0.5s ease-in-out';
+    
+    
+    setTimeout(function() {
+        this.style.animation = '';
+    }, 1000);
+  
+    this.addEventListener('animationend', function() {
+        this.style.animation = '';
+    });
+  });

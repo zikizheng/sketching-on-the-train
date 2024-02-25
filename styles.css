@@ -377,17 +377,76 @@ body, html {
     padding-left: 5%;
 }
 
+
 @keyframes sway {
     0% { transform: rotate(0deg); }
     50% { transform: rotate(10deg); }
     100% { transform: rotate(0deg); }
 }
 
+.pole{
+    z-index: 3;
+    position: absolute;
+    height: 70vh;
+    width: auto;
+    left: 10%;
+}
+
+.pole-guy-img {
+    transition: opacity 0.3s ease-in-out;
+    z-index: 4;
+    position: absolute;
+    height: 160%;
+    width: auto;
+    bottom: -20%;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#pole-guy-2 {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+#pole-guy-h2{
+    color:#fff;
+}
+
+.pole-guy-text{
+    padding-left: 5%;
+    width: 80%;
+    color:#ffffff;
+}
 .head-back{
     height: 60%;
     width: auto;
     transform: scaleX(-1);
 }
+
+.bag-wiggle {
+    transition: opacity 0.3s ease-in-out;
+    z-index: 4;
+    position: absolute;
+    height: 130%;
+    width: auto;
+    bottom: -50%;
+    left:60%;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bag-wiggle:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+  }
 
 p {
     font-family: Montserrat;
