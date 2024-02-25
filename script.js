@@ -80,6 +80,26 @@ document.getElementById('couple').addEventListener('mouseout', function() {
     changeTextColor('', 'couple-text');
 });
 
+document.getElementById('keychain').addEventListener('click', function() {
+    changeTextColor('black', 'keychain-h2');
+    changeTextColor('black', 'keychain-text');
+});
+
+document.getElementById('keychain').addEventListener('mouseout', function() {
+    changeTextColor('', 'keychain-h2');
+    changeTextColor('', 'keychain-text');
+});
+
+document.getElementById('doll-kids').addEventListener('click', function() {
+    changeTextColor('black', 'doll-kids-h2');
+    changeTextColor('black', 'doll-kids-text');
+});
+
+document.getElementById('doll-kids').addEventListener('mouseout', function() {
+    changeTextColor('', 'doll-kids-h2');
+    changeTextColor('', 'doll-kids-text');
+});
+
 
 document.getElementById('bag-1').addEventListener('click', function() {
     this.classList.remove('clicked');
@@ -90,3 +110,33 @@ document.getElementById('bag-1').addEventListener('click', function() {
         this.classList.remove('clicked');
     }, 1000);
 });
+
+const keychain = document.getElementById('keychain');
+
+keychain.addEventListener('mouseenter', function() {
+    this.style.animationPlayState = 'paused'; // Pause the animation on hover
+    this.style.trasnform = 'scale(1.2)';
+});
+
+keychain.addEventListener('mouseleave', function() {
+    this.style.animationPlayState = 'running'; // Resume the animation on mouse leave
+    this.style.trasnform = 'scale(1)';
+});
+
+
+const imageList = [
+    './Assets/People/Subway_DollKid_1.png',
+    './Assets/People/Subway_DollKid_2.png',
+    './Assets/People/Subway_DollKid_3.png',
+    './Assets/People/Subway_DollKid_4.png'
+];
+
+const dollKidsImg = document.getElementById('doll-kids');
+dollKidsImg.src = imageList[0];
+let index = 1;
+function changeImage() {
+    dollKidsImg.src = imageList[index];
+    index = (index + 1) % imageList.length;
+}
+
+setInterval(changeImage, 1000);

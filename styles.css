@@ -226,6 +226,7 @@ body, html {
 }
 
 .bag-1:hover {
+    transition: transform 0.3s ease-in-out;
     transform: translateX(120%) translateY(-20%) scale(1.2);
 }
 
@@ -261,7 +262,7 @@ body, html {
 }
 
 .couple:hover{
-    transition: transform 0.3 ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transform: translateY(10%) scale(1.2);
 }
 
@@ -294,6 +295,92 @@ body, html {
 .door-1{
     max-width: auto;
     height: 90%;
+}
+
+.railings{
+    z-index: 1;
+    position: absolute;
+    width: auto;
+    height: 10%;
+    top: 7%;
+    left: 25%;
+}
+
+#keychain-text{
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+#keychain-h2{
+    color: #fff;
+}
+
+#keychain-text{
+    color: #fff;
+}
+
+.keychain-person{
+    z-index: 2;
+    position: absolute;
+    height: 50%;
+    width: auto;
+    left: 27%;
+    bottom: 15%;
+    transform: translateX(50%);
+}
+
+#keychain-wrapper{
+    animation: sway 1.5s ease-in-out infinite alternate;
+    z-index: 3;
+    position: absolute;
+    height: 10%;
+    bottom: 35%;
+    left: 30%;
+}
+
+#keychain-wrapper:hover > img{
+    transform: scale(1.2);
+}
+
+.keychain{
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.doll-kids{
+    z-index: 2;
+    position: absolute;
+    height: 30%;
+    left: 60%;
+}
+
+.doll-kids:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.doll-kids-h2{
+    color: #fff;
+}
+.doll-kids-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 30%;
+    color: #fff;
+}
+
+#doll-kids-text{
+    width: 50%;
+    padding-left: 5%;
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .head-back{
