@@ -107,6 +107,17 @@ body, html {
     margin: 0;
     margin-bottom: 0.75em;
 }
+.sub-heading-2{
+    padding-left: 5%;
+    font-family: Montserrat;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 80%;
+    margin: 0;
+    margin-bottom: 0.25em;
+}
 
 .top{
     flex: 1;
@@ -137,6 +148,7 @@ body, html {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    width: 80%;
 }
 .seat-top{
     display: flex;
@@ -146,31 +158,129 @@ body, html {
 }
 .window-1{
     display: flex;
+    height: 100%;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+    overflow: visible;
+}
+.window-1:hover {
+    transform: scale(1.2);
+}
+
+.window-1-text{
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    color:#ffffff;
+    width: 40%;
+    left: 40%;
+    top: 7%;
 }
 .window-2{
     display: flex;
+    height: 100%;
     width: auto;
+    transform: translateX(20%);
 }
+.window-3{
+    display: flex;
+    width: auto;
+    transform: translateX(70%);
+}
+
 .window-spacer{
     display: flex;
-    width: 100%;
+    width:25%;
+    flex-direction: column;
 }
 .seat-bot{
     display: flex;
     height: 50%;
     width: 100%;
     flex: 1;
+    flex-direction: column;
+    justify-content: end;
+    z-index: 1;
+    position: relative;
 }
 
 .seat-1{
-    height: 100%;
+    height: 75%;
+    width: 90%;
+}
+
+.bag-1{
+    z-index: 2;
+    position: absolute;
+    height: 30%;
     width: auto;
+    transform: translateX(120%) translateY(-20%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) translateX(120%) translateY(-20%); }
+    100% { transform: rotate(360deg) translateX(-120%) translateY(20%); }
+}
+
+.bag-1.clicked {
+    animation: spin 1s linear infinite;
+}
+
+.bag-1:hover {
+    transform: translateX(120%) translateY(-20%) scale(1.2);
+}
+
+.auntie{
+    z-index: 2;
+    position: absolute;
+    height: 40%;
+    width: auto;
+    transform: translateX(20%) translateY(10%);
+}
+.auntie:hover{
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(20%) translateY(10%) scale(1.2);
+}
+
+#auntie-h2{
+    color:#fff;
+}
+
+.auntie-text{
+    padding-left: 5%;
+    width: 80%;
+    color:#ffffff;
+}
+
+.couple{
+    z-index: 2;
+    position: absolute;
+    height: 40%;
+    width: auto;
+    left: 75%;
+    transform: translateY(10%);
+}
+
+.couple:hover{
+    transition: transform 0.3 ease-in-out;
+    transform: translateY(10%) scale(1.2);
+}
+
+#couple-h2{
+    padding-left: 10%;
+    color:#ffffff;
+}
+
+.couple-text{
+    padding-left: 10%;
+    width: 50%;
+    color:#ffffff;
 }
 
 .door-wrapper{
     flex: 1;
     display: flex;
     height: 100%;
+    flex-grow: 0.7;
 }
 .half-door{
     flex: 1;
